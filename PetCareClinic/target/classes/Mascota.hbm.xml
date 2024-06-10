@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="clases">
+    <class name="Mascota" table="Mascota">
+        <meta attribute="class-description">Datos de la mascota</meta>
+        
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        
+        <discriminator column="tipo" type="string" />
+        
+        <property name="apodo" column="apodo" type="string" />
+        <property name="nombreVulgar" column="nombreVulgar" type="string" />
+        <property name="nombreCientifico" column="nombreCientifico" type="string" />
+        <property name="sexo" column="sexo" type="char" />
+        <property name="anioNacimiento" column="anioNacimiento" type="integer" />
+        
+        <many-to-one name="propietario" column="dni" class="Propietario" />
+        
+        <subclass name="Mamifero" discriminator-value="Mamifero">
+            <property name="raza" column="raza" type="string" />
+            <property name="pedigri" column="pedigri" type="boolean" />
+        </subclass>
+        
+        <subclass name="Ave" discriminator-value="Ave">
+            <property name="tipoPlumaje" column="tipoPlumaje" type="string" />
+            <property name="habitos" column="habitos" type="string" />
+        </subclass>
+        
+        <subclass name="Reptil" discriminator-value="Reptil">
+            <property name="tipoEscamas" column="tipoEscamas" type="string" />
+        </subclass>
+        
+        <subclass name="Pez" discriminator-value="Pez">
+            <property name="tipoAgua" column="tipoAgua" type="string" />
+        </subclass>
+    </class>
+</hibernate-mapping>

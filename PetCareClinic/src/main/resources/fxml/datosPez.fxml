@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ControllerAltaMascota">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1100.0" styleClass="bg-form" stylesheets="@dashboard.css">
+         <children>
+            <AnchorPane layoutX="31.0" layoutY="72.0" prefHeight="405.0" prefWidth="650.0" stylesheets="@dashboard.css">
+               <children>
+                  <TextField fx:id="apodoField" layoutX="169.0" layoutY="48.0" prefWidth="214.0" />
+                  <Label layoutX="46.0" layoutY="51.0" text="Tipo de agua:" textFill="#ef6f6f">
+                     <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="43.0" layoutY="456.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="80.0" text="Volver" />
+                  <Button fx:id="aniadirMascotaButton" layoutX="485.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Añadir nueva mascota" />
+                  <Separator layoutY="11.0" prefHeight="3.0" prefWidth="650.0" stylesheets="@dashboard.css" />
+                  <!-- Campos adicionales -->
+                  <Label fx:id="animalTypeLabel" layoutX="46.0" layoutY="337.0" text="Tipo:" textFill="#ef6f6f" visible="false">
+                     <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="animalTypeValue" layoutX="228.0" layoutY="337.0" text="valor" textFill="#ef6f6f" visible="false">
+                     <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="animalAttributeLabel" layoutX="46.0" layoutY="377.0" text="Atributo:" textFill="#ef6f6f" visible="false">
+                     <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="animalAttributeValue" layoutX="228.0" layoutY="374.0" prefWidth="214.0" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="697.0" prefHeight="600.0" prefWidth="406.0" styleClass="anchorPane" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="359.0" fitWidth="335.0" layoutX="36.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/altaFoto.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="31.0" layoutY="24.0" prefHeight="48.0" prefWidth="640.0" stylesheets="@dashboard.css" text="Datos de Peces">
+               <font>
+                  <Font name="Source Sans Pro Black" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
