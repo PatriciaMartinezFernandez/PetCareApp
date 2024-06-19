@@ -13,18 +13,3 @@ Desarrollar una aplicación que gestione la información de mascotas y sus propi
 ### 4. Listados:
 - El usuario podrá generar listados de mascotas, eligiendo entre un listado completo de todas las mascotas de la clínica o un listado filtrado por tipo de mascota (mamífero, ave, reptil o pez).
 
-## Modelo conceptual
-![Modelo conceptual PetCare](https://raw.githubusercontent.com/PatriciaMartinezFernandez/PetCareApp/main/bd/Conceptual.png)
-
-## Modelo lógico
-![Modelo logico PetCare](https://raw.githubusercontent.com/PatriciaMartinezFernandez/PetCareApp/main/bd/Logico.png)
-
-- Propietario(**dniPK**, nombre, direccion, numMascotas)
-- Mascota(**idPK**, apodo, nombreVulgar, nombreCientifico, sexo, anioNacimiento, _propietarioFK_, tipo)
-- Mamifero(**_idPKFK_**, raza, pedigri)
-- Ave(**_idPKFK_**, tipoPlumaje, habitos)
-- Reptil(**_idPKFK_**, tipoEscamas)
-- Pez(**_idPKFK_**, tipoAgua)
-
-## UML
-![UML PetCare](https://raw.githubusercontent.com/PatriciaMartinezFernandez/PetCareApp/main/uml/PetCare.png)
