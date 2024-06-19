@@ -1,0 +1,76 @@
+.bg-form{
+	-fx-background-color:linear-gradient(to top right, #232E66, #23B469);
+}
+
+.button {
+    -fx-background-color:#232E66;
+    -fx-text-fill: white
+}
+
+.label {
+	-fx-text-fill: white
+}
+
+.hbox {
+    -fx-background-color: linear-gradient(to right, #232E66, #23B469);
+    -fx-background-radius: 30.0;
+    -fx-padding: 20.0;
+    -fx-alignment: center;
+}
+
+.anchorPane {
+	-fx-background-color: white;
+}
+
+.borderPane {
+    -fx-background-color: linear-gradient(to right, #232E66, #23B469);
+    -fx-background-radius: 30.0;
+    -fx-padding: 20.0;
+    -fx-alignment: center;
+}
+
+.choice-box .label {
+	-fx-text-fill: black !important;
+}
+
+.table-view .column-header {
+    -fx-background-color: #232E66;
+    -fx-text-fill:white;
+}
+
+.default-color0.chart-pie { -fx-pie-color: #234A67; }
+.default-color1.chart-pie { -fx-pie-color: #23B469; }
+.default-color2.chart-pie { -fx-pie-color: #235B67; }
+.default-color3.chart-pie { -fx-pie-color: #238768; }
+.default-color4.chart-pie { -fx-pie-color: #237168; }
+ 
+.chart-pie-label-line {
+    -fx-stroke: black;
+    -fx-text-fill: black;
+}
+ 
+.chart-pie-label {
+    -fx-fill: black;
+    -fx-font-size: 1.0em;
+} 
+.chart-legend {
+	-fx-background-color: rgba(35.0, 109.0, 103.0, 0.4);
+	-fx-stroke: white;
+}
+.default-color0.chart-bar { -fx-bar-fill: #234A67; }
+.default-color1.chart-bar { -fx-bar-fill: #23B469; }
+.default-color2.chart-bar { -fx-bar-fill: #235B67; }
+.default-color3.chart-bar { -fx-bar-fill: #238768; }
+.default-color4.chart-bar { -fx-bar-fill: #237168; }
+
+.default-color0.chart-bar-text, .default-color1.chart-bar-text,
+.default-color2.chart-bar-text, .default-color3.chart-bar-text,
+.default-color4.chart-bar-text {
+    -fx-fill: white;
+}
+
+.default-color0.chart-area-symbol { -fx-background-color: #235B67, white; }
+ 
+.default-color0.chart-series-area-line { -fx-stroke: #234A67; }
+ 
+.default-color0.chart-series-area-fill { -fx-fill: #234A67}

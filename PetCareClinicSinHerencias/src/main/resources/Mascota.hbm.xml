@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="clases">
+    <class name="clases.Mascota" table="Mascota">
+        <meta attribute="class-description">Datos de la mascota</meta>
+        
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        
+        
+        <property name="apodo" column="apodo" type="string" />
+        <property name="nombreVulgar" column="nombreVulgar" type="string" />
+        <property name="nombreCientifico" column="nombreCientifico" type="string" />
+        <property name="sexo" column="sexo" type="char" />
+        <property name="anioNacimiento" column="anioNacimiento" type="integer" />
+        <property name="tipoAnimal" column="tipoAnimal" type="string" />
+        
+        <many-to-one name="propietario" column="dni" class="clases.Propietario" />
+       
+    </class>
+</hibernate-mapping>

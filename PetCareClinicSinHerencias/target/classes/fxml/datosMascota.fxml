@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControllerDatosMascota">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1100.0" styleClass="bg-form">
+            <children>
+                <AnchorPane layoutX="697.0" prefHeight="600.0" prefWidth="406.0" styleClass="anchorPane">
+                    <children>
+                        <ImageView fitHeight="359.0" fitWidth="335.0" layoutX="36.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/altaFoto.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="31.0" layoutY="24.0" prefHeight="48.0" prefWidth="162.0" stylesheets="@../css/dashboard.css" text="Datos de ">
+                    <font>
+                        <Font name="Source Sans Pro Black" size="36.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="25.0" layoutY="72.0" prefHeight="480.0" prefWidth="549.0" stylesheets="@../css/dashboard.css">
+                    <children>
+                        <TextField fx:id="textFieldApodo" layoutX="226.0" layoutY="48.0" prefWidth="214.0" />
+                        <Label layoutX="46.0" layoutY="51.0" text="Apodo de la mascota:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="97.0" text="Animal:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="43.0" layoutY="456.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="80.0" text="Volver" />
+                        <Button layoutX="469.0" layoutY="456.0" mnemonicParsing="false" onAction="#confirmarCambios" prefHeight="26.0" prefWidth="154.0" text="Confirmar cambios" />
+                        <Label layoutX="271.0" layoutY="97.0" text="Nombre Científico:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="191.0" text="Sexo:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="radioButtonMacho" layoutX="118.0" layoutY="192.0" mnemonicParsing="false" text="Macho" textFill="WHITE">
+                            <font>
+                                <Font name="Source Sans Pro Black" size="12.0" />
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonHembra" layoutX="245.0" layoutY="192.0" mnemonicParsing="false" text="Hembra" textFill="WHITE">
+                            <font>
+                                <Font name="Source Sans Pro Black" size="12.0" />
+                            </font>
+                        </RadioButton>
+                        <Label layoutX="47.0" layoutY="234.0" text="Año de nacimiento:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="textFieldAnioNacimiento" layoutX="225.0" layoutY="231.0" prefWidth="214.0" stylesheets="@../css/dashboard.css" />
+                        <Label layoutX="43.0" layoutY="289.0" text="Propietario:" textFill="#ef6f6f">
+                            <font>
+                                <Font name="Tahoma Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutY="11.0" prefHeight="3.0" prefWidth="650.0" stylesheets="@../css/dashboard.css" />
+                        <Label fx:id="labelNombreCientifico" layoutX="420.0" layoutY="96.0" prefHeight="19.0" prefWidth="162.0" stylesheets="@../css/dashboard.css" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro Black" size="16.0" />
+                     </font></Label>
+                        <Label layoutX="43.0" layoutY="145.0" stylesheets="@../css/dashboard.css" text="Tipo de Animal:" textFill="WHITE">
+                            <font>
+                                <Font name="Source Sans Pro Black" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelTipoAnimal" layoutX="168.0" layoutY="145.0" prefHeight="21.0" prefWidth="154.0" stylesheets="@../css/dashboard.css" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro Black" size="16.0" />
+                     </font></Label>
+                  <Label fx:id="labelAnimal" layoutX="110.0" layoutY="96.0" prefHeight="21.0" prefWidth="130.0" stylesheets="@../css/dashboard.css">
+                     <font>
+                        <Font name="Source Sans Pro Black" size="16.0" />
+                     </font></Label>
+                  <Label fx:id="labelPropietario" layoutX="147.0" layoutY="289.0" prefHeight="21.0" prefWidth="146.0" stylesheets="@../css/dashboard.css">
+                     <font>
+                        <Font name="Source Sans Pro Black" size="16.0" />
+                     </font></Label>
+                    </children>
+                </AnchorPane>
+                <Label fx:id="labelNombreMascotaEditada" layoutX="188.0" layoutY="24.0" prefHeight="48.0" prefWidth="162.0" stylesheets="@../css/dashboard.css">
+                    <font>
+                        <Font name="Source Sans Pro Black" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
